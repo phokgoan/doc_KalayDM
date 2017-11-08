@@ -1,0 +1,715 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>API Reference</title>
+
+    <style>
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight .gh {
+  color: #999999;
+}
+.highlight .sr {
+  color: #f6aa11;
+}
+.highlight .go {
+  color: #888888;
+}
+.highlight .gp {
+  color: #555555;
+}
+.highlight .gs {
+}
+.highlight .gu {
+  color: #aaaaaa;
+}
+.highlight .nb {
+  color: #f6aa11;
+}
+.highlight .cm {
+  color: #75715e;
+}
+.highlight .cp {
+  color: #75715e;
+}
+.highlight .c1 {
+  color: #75715e;
+}
+.highlight .cs {
+  color: #75715e;
+}
+.highlight .c, .highlight .cd {
+  color: #75715e;
+}
+.highlight .err {
+  color: #960050;
+}
+.highlight .gr {
+  color: #960050;
+}
+.highlight .gt {
+  color: #960050;
+}
+.highlight .gd {
+  color: #49483e;
+}
+.highlight .gi {
+  color: #49483e;
+}
+.highlight .ge {
+  color: #49483e;
+}
+.highlight .kc {
+  color: #66d9ef;
+}
+.highlight .kd {
+  color: #66d9ef;
+}
+.highlight .kr {
+  color: #66d9ef;
+}
+.highlight .no {
+  color: #66d9ef;
+}
+.highlight .kt {
+  color: #66d9ef;
+}
+.highlight .mf {
+  color: #ae81ff;
+}
+.highlight .mh {
+  color: #ae81ff;
+}
+.highlight .il {
+  color: #ae81ff;
+}
+.highlight .mi {
+  color: #ae81ff;
+}
+.highlight .mo {
+  color: #ae81ff;
+}
+.highlight .m, .highlight .mb, .highlight .mx {
+  color: #ae81ff;
+}
+.highlight .sc {
+  color: #ae81ff;
+}
+.highlight .se {
+  color: #ae81ff;
+}
+.highlight .ss {
+  color: #ae81ff;
+}
+.highlight .sd {
+  color: #e6db74;
+}
+.highlight .s2 {
+  color: #e6db74;
+}
+.highlight .sb {
+  color: #e6db74;
+}
+.highlight .sh {
+  color: #e6db74;
+}
+.highlight .si {
+  color: #e6db74;
+}
+.highlight .sx {
+  color: #e6db74;
+}
+.highlight .s1 {
+  color: #e6db74;
+}
+.highlight .s {
+  color: #e6db74;
+}
+.highlight .na {
+  color: #a6e22e;
+}
+.highlight .nc {
+  color: #a6e22e;
+}
+.highlight .nd {
+  color: #a6e22e;
+}
+.highlight .ne {
+  color: #a6e22e;
+}
+.highlight .nf {
+  color: #a6e22e;
+}
+.highlight .vc {
+  color: #ffffff;
+}
+.highlight .nn {
+  color: #ffffff;
+}
+.highlight .nl {
+  color: #ffffff;
+}
+.highlight .ni {
+  color: #ffffff;
+}
+.highlight .bp {
+  color: #ffffff;
+}
+.highlight .vg {
+  color: #ffffff;
+}
+.highlight .vi {
+  color: #ffffff;
+}
+.highlight .nv {
+  color: #ffffff;
+}
+.highlight .w {
+  color: #ffffff;
+}
+.highlight {
+  color: #ffffff;
+}
+.highlight .n, .highlight .py, .highlight .nx {
+  color: #ffffff;
+}
+.highlight .ow {
+  color: #f92672;
+}
+.highlight .nt {
+  color: #f92672;
+}
+.highlight .k, .highlight .kv {
+  color: #f92672;
+}
+.highlight .kn {
+  color: #f92672;
+}
+.highlight .kp {
+  color: #f92672;
+}
+.highlight .o {
+  color: #f92672;
+}
+    </style>
+    <link href="stylesheets/screen.css" rel="stylesheet" media="screen" />
+    <link href="stylesheets/print.css" rel="stylesheet" media="print" />
+      <script src="javascripts/all.js"></script>
+  </head>
+
+  <body class="index" data-languages="[&quot;java&quot;]">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="images/navbar.png" alt="Navbar" />
+      </span>
+    </a>
+    <div class="toc-wrapper">
+      <img src="images/logo.png" class="logo" alt="Logo" />
+        <div class="lang-selector">
+              <a href="#" data-language-name="java">java</a>
+        </div>
+        <div class="search">
+          <input type="text" class="search" id="input-search" placeholder="Search">
+        </div>
+        <ul class="search-results"></ul>
+      <div id="toc" class="toc-list-h1">
+          <li>
+            <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#working-with-kalay-dm-server" class="toc-h1 toc-link" data-title="Working with Kalay DM Server">Working with Kalay DM Server</a>
+          </li>
+          <li>
+            <a href="#client-configuration" class="toc-h1 toc-link" data-title="Client Configuration">Client Configuration</a>
+          </li>
+          <li>
+            <a href="#defiderm-device-data-update" class="toc-h1 toc-link" data-title="Defiderm Device Data Update">Defiderm Device Data Update</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#string-type" class="toc-h2 toc-link" data-title="String Type">String Type</a>
+                  </li>
+                  <li>
+                    <a href="#float-type" class="toc-h2 toc-link" data-title="Float Type">Float Type</a>
+                  </li>
+                  <li>
+                    <a href="#integer-type" class="toc-h2 toc-link" data-title="Integer Type">Integer Type</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#data-retrieval" class="toc-h1 toc-link" data-title="Data Retrieval">Data Retrieval</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#web-socket-connection" class="toc-h2 toc-link" data-title="Web Socket Connection">Web Socket Connection</a>
+                  </li>
+                  <li>
+                    <a href="#http-observe" class="toc-h2 toc-link" data-title="HTTP Observe">HTTP Observe</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#available-resources-for-defiderm-object" class="toc-h1 toc-link" data-title="Available Resources for Defiderm Object">Available Resources for Defiderm Object</a>
+          </li>
+      </div>
+    </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+        <h1 id='introduction'>Introduction</h1>
+<p>Welcome to the Kalay Device Management API! You can use this API for registering your device with Kalay Device Management (a.k.a. <strong>DM</strong>) Server, updating data, and also retrieve data from the Kalay Data Server.</p>
+
+<p>Currently we have API support for Android in Java, and are on our way delivering an iOS version.</p>
+<h1 id='working-with-kalay-dm-server'>Working with Kalay DM Server</h1><pre class="highlight java tab-java"><code><span class="n">Wakaama</span> <span class="n">mWakaama</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Wakaama</span><span class="o">();</span>
+<span class="n">mWakaama</span><span class="o">.</span><span class="na">init</span><span class="o">();</span>
+</code></pre>
+<p>In order to connect your device to the Kalay DM Server, you have to initialize a <code>Wakaama</code> object by running <code>init</code>.</p>
+<h1 id='client-configuration'>Client Configuration</h1><pre class="highlight java tab-java"><code>
+<span class="kt">int</span> <span class="n">lifetime</span> <span class="o">=</span> <span class="mi">30</span><span class="o">;</span> <span class="c1">// Unit: second</span>
+<span class="n">String</span> <span class="n">endpoint_name</span> <span class="o">=</span> <span class="s">"Device001"</span><span class="o">;</span>
+<span class="n">String</span> <span class="n">endpoint_port</span> <span class="o">=</span> <span class="s">"56830"</span><span class="o">;</span>
+<span class="n">String</span> <span class="n">server_name</span> <span class="o">=</span> <span class="s">"52.42.150.111"</span><span class="o">;</span>
+<span class="n">String</span> <span class="n">server_port</span> <span class="o">=</span> <span class="s">"5683"</span><span class="o">;</span>
+
+<span class="n">setLifetime</span><span class="o">(</span> <span class="n">lifetime</span> <span class="o">);</span>
+<span class="n">setName</span><span class="o">(</span> <span class="n">endpoint_name</span> <span class="o">);</span>
+<span class="n">setPort</span><span class="o">(</span> <span class="n">endpoint_port</span> <span class="o">);</span>
+<span class="n">setServerName</span><span class="o">(</span> <span class="n">server_name</span> <span class="o">);</span>
+<span class="n">setServerPort</span><span class="o">(</span> <span class="n">server_port</span> <span class="o">);</span>
+<span class="n">setIPv4</span><span class="o">();</span>
+</code></pre>
+<p>After running the <code>init</code> step, you may explicitly call one of the following methods before you register to and start working with the DM Server --</p>
+
+<ol>
+<li><code>setLifetime</code>: This method is used for setting up the lifetime for device registration update interval. The input should be integer and the unit is <em>second</em>. The default value is <strong>30</strong> and it should be set no greater than this value when using IPv4 in order to keep the connection alive.</li>
+<li><code>setName</code>: This method should be used for setting up the endpoint name of your device. This name will be later used when a data retriever or any other observers try to observe your device. In other words, the name will be the ID of your device and it should be a <em>string</em> that only contain simple alphanumeric characters.</li>
+<li><code>setPort</code>: This method should be used for setting up the port of your device. Normally it can be leaved unchanged.</li>
+<li><code>setServerName</code>: This method should be used for setting up the host name of the server you are connecting to. The current DM Server only supports IPv4. The input should be a <em>string</em> that contains full IP or domain name.</li>
+<li><code>setServerPort</code>: This method should be used for setting up the port of the server you are connecting to. The default port is <em>5683</em>. It is the default port used by <strong>CoAP</strong>, the Transport-Layer protocol for our communication system.</li>
+<li><code>setIPv4</code> This method is used for switching the network connection to IPv4 connection. This method doesn&#39;t take any input. Since IPv4 is the default for our service, there&#39;s no need for explicit call for this method.</li>
+</ol>
+<pre class="highlight java tab-java"><code><span class="n">String</span> <span class="n">endpoint_name</span> <span class="o">=</span> <span class="n">getName</span><span class="o">();</span>
+<span class="n">String</span> <span class="n">endpoint_port</span> <span class="o">=</span> <span class="n">getPort</span><span class="o">();</span>
+<span class="n">String</span> <span class="n">server_name</span> <span class="o">=</span> <span class="n">getServerName</span><span class="o">();</span>
+<span class="n">String</span> <span class="n">server_port</span> <span class="o">=</span> <span class="n">getServerPort</span><span class="o">();</span>
+<span class="kt">boolean</span> <span class="n">isIPv4</span> <span class="o">=</span> <span class="n">getIPv4</span><span class="o">();</span>
+</code></pre>
+<p>In contrast, there are methods getting the information set by the methods above --</p>
+
+<ol>
+<li><code>getName</code>: This method is used for getting the endpoint name of the device. The method returns a <em>string</em>.</li>
+<li><code>getPort</code>: This method is used for getting the port of the device. The method returns a <em>string</em>.</li>
+<li><code>getServerName</code>: This method is used for getting the address of the DM Server. The method returns a <em>string</em>.</li>
+<li><code>getServerPort</code>: This method is used for getting the port of the DM Server to which the device is connected. The method returns a <em>string</em>.</li>
+<li><code>getIPv4</code>: This method returns <code>true</code> if the connection is running through IPv4, and <code>false</code> otherwise.</li>
+</ol>
+<h1 id='defiderm-device-data-update'>Defiderm Device Data Update</h1>
+<p>For a connected <strong>DM Defiderm Client</strong>, there are currently 28 methods for updating the object resources. These methods are used for updating the client with the values got from a physical device. All these methods have two inputs -- the first ones are <strong>instance IDs</strong>, and the second ones the actual data. </p>
+
+<p>Instance ID is used to distinguish devices when multiple devices are connected to the app. For the case that only one device is connected, its instance ID should be <code>0</code>.</p>
+<h2 id='string-type'>String Type</h2><pre class="highlight java tab-java"><code><span class="n">String</span> <span class="n">value</span><span class="o">;</span>
+
+<span class="n">setAccountIdValue</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span> <span class="n">value</span><span class="o">);</span>
+<span class="n">setMacValue</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span> <span class="n">value</span><span class="o">);</span>
+<span class="n">setSkinValue</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span> <span class="n">value</span><span class="o">);</span>
+<span class="n">setUserIdValue</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span> <span class="n">value</span><span class="o">);</span>
+<span class="n">setSerialNumberValue</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span> <span class="n">value</span><span class="o">);</span>
+<span class="n">setVendorCodeValue</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span> <span class="n">value</span><span class="o">);</span>
+<span class="n">setDeviceIdValue</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span> <span class="n">value</span><span class="o">);</span>
+<span class="n">setHydrationLevelDescriptionValue</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span> <span class="n">value</span><span class="o">);</span>
+<span class="n">setIdValue</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span> <span class="n">value</span><span class="o">);</span>
+<span class="n">setMelaninLevelDescriptionValue</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span> <span class="n">value</span><span class="o">);</span>
+<span class="n">setRednessLevelDescriptionValue</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span> <span class="n">value</span><span class="o">);</span>
+</code></pre>
+<p>For the following data types, please insert <code>string</code> type of values. The upper bound of the length of these strings are limited to 128 characters.</p>
+
+<ol>
+<li><em>accountId</em></li>
+<li><em>mac</em></li>
+<li><em>skin</em></li>
+<li><em>userId</em></li>
+<li><em>serialNumber</em></li>
+<li><em>vendorCode</em></li>
+<li><em>deviceId</em></li>
+<li><em>hydrationLevelDescription</em></li>
+<li><em>id</em></li>
+<li><em>melaninLevelDescription</em></li>
+<li><em>rednessLevelDescription</em></li>
+</ol>
+<h2 id='float-type'>Float Type</h2><pre class="highlight java tab-java"><code><span class="kt">float</span> <span class="n">value</span><span class="o">;</span>
+
+<span class="n">setBatteryValue</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span> <span class="n">value</span><span class="o">);</span>
+<span class="n">setHumidityValue</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span> <span class="n">value</span><span class="o">);</span>
+<span class="n">setLatValue</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span> <span class="n">value</span><span class="o">);</span>
+<span class="n">setLngValue</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span> <span class="n">value</span><span class="o">);</span>
+<span class="n">setTemperatureValue</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span> <span class="n">value</span><span class="o">);</span>
+<span class="n">setUvValue</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span> <span class="n">value</span><span class="o">);</span>
+<span class="n">setHydrationValue</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span> <span class="n">value</span><span class="o">);</span>
+<span class="n">setHydrationPercentageValue</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span> <span class="n">value</span><span class="o">);</span>
+<span class="n">setMelaninValue</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span> <span class="n">value</span><span class="o">);</span>
+<span class="n">setMelaninPercentageValue</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span> <span class="n">value</span><span class="o">);</span>
+<span class="n">setRednessValue</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span> <span class="n">value</span><span class="o">);</span>
+<span class="n">setRednessPercentageValue</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span> <span class="n">value</span><span class="o">);</span>
+</code></pre>
+<p>For the following data types, please insert <code>float</code> type of values.</p>
+
+<ol>
+<li><em>battery</em></li>
+<li><em>humidity</em></li>
+<li><em>lat</em></li>
+<li><em>lng</em></li>
+<li><em>temperature</em></li>
+<li><em>uv</em></li>
+<li><em>hydration</em></li>
+<li><em>hydrationPercentage</em></li>
+<li><em>melanin</em></li>
+<li><em>melaninPercentage</em></li>
+<li><em>redness</em></li>
+<li><em>rednessPercentage</em></li>
+</ol>
+<h2 id='integer-type'>Integer Type</h2><pre class="highlight java tab-java"><code><span class="kt">long</span> <span class="n">value</span><span class="o">;</span>
+
+<span class="n">setCreatedAtValue</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span> <span class="n">value</span><span class="o">);</span>
+<span class="n">setLastModifiedAtValue</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span> <span class="n">value</span><span class="o">);</span>
+</code></pre>
+<p>For the following data types, please insert <code>long</code> type of values. These two values are timestamps, and should be integers that represent <strong>seconds</strong> after Unix epoch.</p>
+
+<ol>
+<li><em>createdAt</em></li>
+<li><em>lastModifiedAt</em></li>
+</ol>
+<pre class="highlight java tab-java"><code><span class="kt">byte</span> <span class="n">value</span><span class="o">;</span>
+
+<span class="n">setHydrationLevelValue</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span> <span class="n">value</span><span class="o">);</span>
+<span class="n">setMelaninLevelValue</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span> <span class="n">value</span><span class="o">);</span>
+<span class="n">setRednessLevelValue</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span> <span class="n">value</span><span class="o">);</span>
+</code></pre>
+<p>For the following data types, please insert <code>byte</code> type of values.</p>
+
+<ol>
+<li><em>hydrationLevel</em></li>
+<li><em>melaninLevel</em></li>
+<li><em>rednessLevel</em></li>
+</ol>
+<h1 id='data-retrieval'>Data Retrieval</h1>
+<p>The data retrieval part is currently not an intrinsic part of the library, since it is offered by the REST API from the Kalay Data Server. It can be done by a simple HTTP <code>PUT</code> action followed by an open <strong>Web Socket</strong> listing to the service. The data will be then retrieved whenever it is updated.</p>
+<h2 id='web-socket-connection'>Web Socket Connection</h2><pre class="highlight java tab-java"><code><span class="n">String</span> <span class="n">mHost</span> <span class="o">=</span> <span class="s">"dm.kalay.co"</span><span class="o">;</span>
+<span class="kt">int</span> <span class="n">mPort</span> <span class="o">=</span> <span class="mi">80</span><span class="o">;</span>
+<span class="n">String</span> <span class="n">mToken</span><span class="o">;</span> <span class="c1">// Please get this from the Kalay Account Management Service</span>
+
+<span class="n">HashMap</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">String</span><span class="o">&gt;</span> <span class="n">headers</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashMap</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">String</span><span class="o">&gt;();</span>
+<span class="n">headers</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"Origin"</span><span class="o">,</span> <span class="n">String</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="s">"%s/%d"</span><span class="o">,</span> <span class="n">mHost</span><span class="o">,</span> <span class="n">mPort</span><span class="o">));</span>
+<span class="n">headers</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"Authorization"</span><span class="o">,</span> <span class="s">"Bearer "</span> <span class="o">+</span> <span class="n">mToken</span><span class="o">);</span>
+</code></pre>
+<p>In order to run the data retrieval procedure, a <em>Web Socket</em> should be initialized with a header with two parts of information --</p>
+
+<ol>
+<li>&quot;Origin&quot;: The content of this should be the URL of the Kalay Data Server, which is currently &quot;dm.kalay.co:80&quot;.</li>
+<li>&quot;Authorization&quot;: The content of this should be the string &quot;Bearer &quot; followed by a token got from the Kalay Account Management (a.k.a. <strong>AM</strong>) Service.</li>
+</ol>
+<pre class="highlight java tab-java"><code><span class="n">String</span> <span class="n">mHost</span> <span class="o">=</span> <span class="s">"dm.kalay.co"</span><span class="o">;</span>
+<span class="kt">int</span> <span class="n">mPort</span> <span class="o">=</span> <span class="mi">80</span><span class="o">;</span>
+<span class="n">String</span> <span class="n">mEndpoint</span> <span class="o">=</span> <span class="s">"Device001"</span><span class="o">;</span>
+<span class="n">String</span> <span class="n">mResource</span> <span class="o">=</span> <span class="s">"10000/0"</span><span class="o">;</span>
+
+<span class="n">URI</span> <span class="n">uri</span> <span class="o">=</span> <span class="k">new</span> <span class="n">URI</span><span class="o">(</span><span class="n">String</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="s">"ws://%s:%d/devices/%s/%s"</span><span class="o">,</span> <span class="n">mHost</span><span class="o">,</span> <span class="n">mPort</span><span class="o">,</span> <span class="n">mEndpoint</span><span class="o">,</span> <span class="n">mResource</span><span class="o">));</span>
+</code></pre>
+<p>The Web Socket can be connected right at the very beginning of the entire data retrieval process. It should connect to the URI that is pointing to the <strong>endpoint name</strong> and <strong>object instance path</strong> of the desired data source.</p>
+
+<p>The current <strong>Defiderm Object Model</strong> defines the object ID as <code>10000</code>. In addition, when connecting to the <em>only</em> instance of that object, the instance ID should be <code>0</code>. In other words, <code>10000/0</code> should be the object instance path in most cases.</p>
+
+<p>In addition, the user can also choose to listen to a single resource instead of the entire object. For this use case, simply insert the full path to the resource to the URI. For instance, <code>10000/0/2</code> for observing the <strong>battery value of the first Defiderm instance</strong>. The resource IDs are listed in the end of this document.</p>
+<h2 id='http-observe'>HTTP Observe</h2><pre class="highlight java tab-java"><code><span class="n">String</span> <span class="n">mHost</span> <span class="o">=</span> <span class="s">"dm.kalay.co"</span><span class="o">;</span>
+<span class="kt">int</span> <span class="n">mPort</span> <span class="o">=</span> <span class="mi">80</span><span class="o">;</span>
+<span class="n">String</span> <span class="n">mEndpoint</span> <span class="o">=</span> <span class="s">"Device001"</span><span class="o">;</span>
+<span class="n">String</span> <span class="n">mResource</span> <span class="o">=</span> <span class="s">"10000/0"</span><span class="o">;</span>
+
+<span class="n">URL</span> <span class="n">url</span> <span class="o">=</span> <span class="k">new</span> <span class="n">URL</span><span class="o">(</span><span class="n">String</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="s">"http://%s:%d/devices/%s/%s/observe"</span><span class="o">,</span> <span class="n">mHost</span><span class="o">,</span> <span class="n">mPort</span><span class="o">,</span> <span class="n">mEndpoint</span><span class="o">,</span> <span class="n">mResource</span><span class="o">));</span>
+
+<span class="n">HttpURLConnection</span> <span class="n">conn</span> <span class="o">=</span> <span class="o">(</span><span class="n">HttpURLConnection</span><span class="o">)</span> <span class="n">url</span><span class="o">.</span><span class="na">openConnection</span><span class="o">();</span>
+<span class="n">conn</span><span class="o">.</span><span class="na">setRequestProperty</span><span class="o">(</span><span class="s">"Authorization"</span><span class="o">,</span> <span class="s">"Bearer "</span> <span class="o">+</span> <span class="n">mToken</span><span class="o">);</span>
+<span class="n">conn</span><span class="o">.</span><span class="na">setDoOutput</span><span class="o">(</span><span class="kc">true</span><span class="o">);</span>
+<span class="n">conn</span><span class="o">.</span><span class="na">setRequestMethod</span><span class="o">(</span><span class="s">"PUT"</span><span class="o">);</span>
+</code></pre>
+<p>As for observing the data, simply trigger the process by notifying the Kalay Data Server by processing an HTTP <code>PUT</code> to the resource path <strong>followed by &quot;observe&quot;</strong>.</p>
+
+<p>After these two processes are run, the data retrieval process is set and the observer will get updates everytime when the client data is updated.</p>
+<h1 id='available-resources-for-defiderm-object'>Available Resources for Defiderm Object</h1>
+<table><thead>
+<tr>
+<th>Resource Name</th>
+<th>ID</th>
+<th>Access Type</th>
+<th>Mandatory</th>
+<th>Type</th>
+<th>Range</th>
+<th>Units</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>accountId</td>
+<td>1</td>
+<td>R</td>
+<td>Mandatory</td>
+<td>String</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>battery</td>
+<td>2</td>
+<td>R</td>
+<td>Mandatory</td>
+<td>Float</td>
+<td>0 - 100</td>
+<td>%</td>
+</tr>
+<tr>
+<td>humidity</td>
+<td>3</td>
+<td>R</td>
+<td>Mandatory</td>
+<td>Float</td>
+<td>0 - 100</td>
+<td>%</td>
+</tr>
+<tr>
+<td>lat</td>
+<td>4</td>
+<td>R</td>
+<td>Mandatory</td>
+<td>Float</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>lng</td>
+<td>5</td>
+<td>R</td>
+<td>Mandatory</td>
+<td>Float</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>mac</td>
+<td>6</td>
+<td>R</td>
+<td>Mandatory</td>
+<td>String</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>skin</td>
+<td>12</td>
+<td>R</td>
+<td>Mandatory</td>
+<td>String</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>temperature</td>
+<td>13</td>
+<td>R</td>
+<td>Mandatory</td>
+<td>Float</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>userId</td>
+<td>14</td>
+<td>R</td>
+<td>Mandatory</td>
+<td>String</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>uv</td>
+<td>15</td>
+<td>R</td>
+<td>Mandatory</td>
+<td>Float</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>serialNumber</td>
+<td>16</td>
+<td>R</td>
+<td>Mandatory</td>
+<td>String</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>vendorCode</td>
+<td>17</td>
+<td>R</td>
+<td>Mandatory</td>
+<td>String</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>createdAt</td>
+<td>101</td>
+<td>R</td>
+<td>Mandatory</td>
+<td>Time</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>deviceId</td>
+<td>102</td>
+<td>R</td>
+<td>Mandatory</td>
+<td>String</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>hydration</td>
+<td>103</td>
+<td>R</td>
+<td>Mandatory</td>
+<td>Float</td>
+<td>0 - 100</td>
+<td>%</td>
+</tr>
+<tr>
+<td>hydrationLevel</td>
+<td>104</td>
+<td>R</td>
+<td>Mandatory</td>
+<td>Integer</td>
+<td>1 - 6</td>
+<td></td>
+</tr>
+<tr>
+<td>hydrationLevelDescription</td>
+<td>105</td>
+<td>R</td>
+<td>Mandatory</td>
+<td>String</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>hydrationPercentage</td>
+<td>106</td>
+<td>R</td>
+<td>Mandatory</td>
+<td>Float</td>
+<td>0 - 100</td>
+<td>%</td>
+</tr>
+<tr>
+<td>id</td>
+<td>108</td>
+<td>R</td>
+<td>Mandatory</td>
+<td>String</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>lastModifiedAt</td>
+<td>109</td>
+<td>R</td>
+<td>Mandatory</td>
+<td>Time</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>melanin</td>
+<td>110</td>
+<td>R</td>
+<td>Mandatory</td>
+<td>Float</td>
+<td>0 - 100</td>
+<td>%</td>
+</tr>
+<tr>
+<td>melaninLevel</td>
+<td>111</td>
+<td>R</td>
+<td>Mandatory</td>
+<td>Integer</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>melaninLevelDescription</td>
+<td>112</td>
+<td>R</td>
+<td>Mandatory</td>
+<td>String</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>melaninPercentage</td>
+<td>113</td>
+<td>R</td>
+<td>Mandatory</td>
+<td>Float</td>
+<td>0 - 100</td>
+<td>%</td>
+</tr>
+<tr>
+<td>redness</td>
+<td>117</td>
+<td>R</td>
+<td>Mandatory</td>
+<td>Float</td>
+<td>0 - 100</td>
+<td>%</td>
+</tr>
+<tr>
+<td>rednessLevel</td>
+<td>118</td>
+<td>R</td>
+<td>Mandatory</td>
+<td>Integer</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>rednessLevelDescription</td>
+<td>119</td>
+<td>R</td>
+<td>Mandatory</td>
+<td>String</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>rednessPercentage</td>
+<td>120</td>
+<td>R</td>
+<td>Mandatory</td>
+<td>Float</td>
+<td>0 - 100</td>
+<td>%</td>
+</tr>
+</tbody></table>
+
+      </div>
+      <div class="dark-box">
+          <div class="lang-selector">
+                <a href="#" data-language-name="java">java</a>
+          </div>
+      </div>
+    </div>
+  </body>
+</html>
